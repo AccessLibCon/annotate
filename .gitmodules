@@ -1,0 +1,3 @@
+[submodule "SimpleAnnotationServer"]
+	path = SimpleAnnotationServer
+	url = https://github.com/glenrobson/SimpleAnnotationServer.git
