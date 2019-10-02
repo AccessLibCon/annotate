@@ -1,0 +1,19 @@
+title: IIIF Annotation Demo
+description: ""
+baseurl: "/annotate"
+url: "http://marii.info"
+
+markdown: kramdown
+permalink: pretty
+
+github_username: mnyrop
+social_username: mariinyrop
+
+theme: jekyll-swiss
+
+exclude: [Rakefile, Gemfile*, vendor]
+include: [feed.xml]
+
+webrick:
+  headers:
+    "Access-Control-Allow-Origin": "*"
