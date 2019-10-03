@@ -1,4 +1,4 @@
-# IIIF-Annotate [![Build Status](https://travis-ci.org/mnyrop/annotate.svg?branch=master)](https://travis-ci.org/mnyrop/annotate)   ![Libraries.io for GitHub](https://img.shields.io/librariesio/github/mnyrop/annotate.svg)
+This is a Hackfest project from [Access 2019](https://accessconference.ca), based on Marii Nyrop's [Annotate](https://github.com/mnyrop/annotate) demo. This version adds an instance of SimpleAnnotationServer (in a Docker container) to store the annotations, replacing the use of the browser's local storage. (In this it departs from the minimal computing commitment of the original.)
 
 Create/store/load static annotations on IIIF manifests via Jekyll
 

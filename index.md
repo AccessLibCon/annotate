@@ -21,14 +21,14 @@ Switch between objects by clicking <i class="fa fa-th-large"></i> in the top lef
 
 Make sure you are on Image View <i class="fa fa-photo"></i> then toggle the Annotation <i class="fa fa-comments"></i> panel.
 
-Add one or more annotations to one or more pages. Then click the 'view cached annotation JSON' button below.
+Add one or more annotations to one or more pages.
 
 <div id="3"></div>
 <h1 class="h0">3. View Annotations</h1>
 
 To view annotations, visit the SimpleAnnotationStore server: [http://localhost:8888/annotation/](http://localhost:8888/annotation/).
 
-To view the annotation list for a given canvas, use a url like this:
+To view the annotation list for a given canvas, Mirador uses a url like this:
 
 ```http://localhost:8888/annotation/search?uri=https%3A%2F%2Fderivativo-3.library.columbia.edu%2Fiiif%2F2%2Fpresentation%2F10.7916%2Fd8-fcng-k085%2Fcanvas%2F10.7916%2Fd8-dg2m-rw91&APIKey=user_auth&media=image&limit=10000&_=1570049878385```
 
