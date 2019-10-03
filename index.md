@@ -23,39 +23,19 @@ Make sure you are on Image View <i class="fa fa-photo"></i> then toggle the Anno
 
 Add one or more annotations to one or more pages. Then click the 'view cached annotation JSON' button below.
 
-**\*Note:** This will only include *new* annotations added in the browser.
-
-<br>
-
-{% include annotation_to_json.html %}
-
 <div id="3"></div>
-<h1 class="h0">3. Store Annotations</h1>
-<br>
-<div class="col-4 sm-width-full border-top-thin"></div>
-<br>
+<h1 class="h0">3. View Annotations</h1>
 
-<iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/nHbsm8T1BnI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+To view annotations, visit the SimpleAnnotationStore server: [http://localhost:8888/annotation/](http://localhost:8888/annotation/).
 
-__1.__ Make sure you a running a modern version of Ruby (v2 or later) and have **[Jekyll](https://jekyllrb.com/)** installed.
+To view the annotation list for a given canvas, use a url like this:
 
-__2.__ Clone the **[demo site repository](https://github.com/mnyrop/bnf640)** onto your local machine and open it in a text editor like **[Atom](https://atom.io/)**.
+```http://localhost:8888/annotation/search?uri=https%3A%2F%2Fderivativo-3.library.columbia.edu%2Fiiif%2F2%2Fpresentation%2F10.7916%2Fd8-fcng-k085%2Fcanvas%2F10.7916%2Fd8-dg2m-rw91&APIKey=user_auth&media=image&limit=10000&_=1570049878385```
 
-__3.__ Serve the site locally by moving into the site directory and running
-`$ bundle install && bundle exec jekyll serve`
+The URI in that search is
 
-__4.__ Add some new annotations by following **[the instructions above]({{ site.baseurl }}/#2)**.
+```https://derivativo-3.library.columbia.edu/iiif/2/presentation/10.7916/d8-fcng-k085/canvas/10.7916/d8-dg2m-rw91```, which is the ```@id``` of this canvas in the source manifest.
 
-__5.__ Continue to add or delete annotations. When you are ready, click 'view cached annotation JSON' again then download the data for each canvas.
+The SimpleAnnotationServer documentation has further information on its [search service](https://github.com/glenrobson/SimpleAnnotationServer/blob/master/doc/IIIFSearch.md).
 
-__6.__ Clear the cached annotations from your browser storage. (In Chrome, right click > Inspect > Application > Clear Storage > Clear site data). Your annotations will be gone at this point.
-
-__7.__ Stop the Jekyll serve command. (CTRL-C on Mac)
-
-__8.__ Drag the downloaded JSON files into correct folder within the `annotation` annotation directory of the demo site repository. (Either `bnf640` or `haemisphaerium`. Do not put them into any subfolders.)
-
-__9.__ Run `$ bundle exec rake`. This will store your annotations in subfolders and create a copy of the IIIF manifest that will reference them.
-
-__10.__ Serve the site again with `$ bundle exec jekyll serve`. Your annotations will be back and permanent!
-
-__11.__ Want to add more annotations? Follow the same process and drag new files into the `annotations` folder. This will not overwrite any existing annotation data.
+If you have an external annotation server that you would like to use, edit the Mirador configuration in ```_includes/iiif_presentation.html``` to point to it.
